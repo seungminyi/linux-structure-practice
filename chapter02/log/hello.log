@@ -1,0 +1,29 @@
+execve("./build/hello", ["./build/hello"], [/* 20 vars */]) = 0 <0.002129>
+brk(NULL)                               = 0x18f6c000 <0.000105>
+faccessat(AT_FDCWD, "/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory) <0.000146>
+faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory) <0.000267>
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3 <0.000112>
+fstat(3, {st_mode=S_IFREG|0644, st_size=14636, ...}) = 0 <0.000443>
+mmap(NULL, 14636, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffffad309000 <0.000236>
+close(3)                                = 0 <0.000009>
+faccessat(AT_FDCWD, "/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory) <0.000048>
+openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3 <0.000111>
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0(\372\1\0\0\0\0\0"..., 832) = 832 <0.000045>
+fstat(3, {st_mode=S_IFREG|0755, st_size=1261896, ...}) = 0 <0.000483>
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffffad308000 <0.000161>
+mmap(NULL, 1331864, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xffffad19e000 <0.000122>
+mprotect(0xffffad2cb000, 61440, PROT_NONE) = 0 <0.000367>
+mmap(0xffffad2da000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x12c000) = 0xffffad2da000 <0.000175>
+mmap(0xffffad2e0000, 12952, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xffffad2e0000 <0.000104>
+close(3)                                = 0 <0.000100>
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffffad307000 <0.000057>
+mprotect(0xffffad2da000, 16384, PROT_READ) = 0 <0.000080>
+mprotect(0x410000, 4096, PROT_READ)     = 0 <0.000137>
+mprotect(0xffffad310000, 4096, PROT_READ) = 0 <0.000123>
+munmap(0xffffad309000, 14636)           = 0 <0.000156>
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 0), ...}) = 0 <0.000194>
+brk(NULL)                               = 0x18f6c000 <0.000090>
+brk(0x18f8d000)                         = 0x18f8d000 <0.000151>
+write(1, "hello world\n", 12)           = 12 <0.000015>
+exit_group(0)                           = ?
++++ exited with 0 +++
